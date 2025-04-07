@@ -11,10 +11,11 @@ export function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T 
       // Get from local storage by key
       const item = window.localStorage.getItem(key);
       // Parse stored json or if none return initialValue
-      setStoredValue(item ? JSON.parse(item) : initialValue);
+      if (item) {
+        setStoredValue(JSON.parse(item));
+      }
     } catch (error) {
       console.log(error);
-      return initialValue;
     }
   }, [key, initialValue]);
 
