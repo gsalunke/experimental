@@ -1,9 +1,9 @@
 import React from 'react';
-import { ThemeProvider } from '@/context/ThemeContext';
-import UseStateExample from '@/components/hooks/UseStateExample';
-import UseEffectExample from '@/components/hooks/UseEffectExample';
-import UseContextExample from '@/components/hooks/UseContextExample';
-import CustomHookExample from '@/components/hooks/CustomHookExample';
+import { ThemeProvider } from '@/app/context/ThemeContext';
+import UseStateExample from '@/app/components/hooks/UseStateExample';
+import UseEffectExample from '@/app/components/hooks/UseEffectExample';
+import UseContextExample from '@/app/components/hooks/UseContextExample';
+import CustomHookExample from '@/app/components/hooks/CustomHookExample';
 
 const HooksPage = () => {
   return (
