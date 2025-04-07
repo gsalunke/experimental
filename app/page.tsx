@@ -15,7 +15,13 @@ export default function Home() {
             <p>Explore examples of useState, useEffect, useContext, and custom hooks</p>
           </Link>
           
-          {/* Add more example links here in the future */}
+          <Link 
+            href="/lifecycle" 
+            className="p-6 border rounded-lg hover:border-blue-500 transition-colors"
+          >
+            <h2 className="text-2xl font-semibold mb-2">React Lifecycle Methods →</h2>
+            <p>Learn about component lifecycle methods including mounting, updating, unmounting, and error handling</p>
+          </Link>
         </div>
       </div>
     </main>
