@@ -1,12 +1,15 @@
+"use client";
+
 import React, { useState, useEffect } from 'react';
 
 const UseEffectExample: React.FC = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState<number>(0);
   const [count, setCount] = useState(0);
   const [data, setData] = useState<string | null>(null);
 
   // Effect 1: Window resize listener
   useEffect(() => {
+    setWindowWidth(window.innerWidth);
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
 
