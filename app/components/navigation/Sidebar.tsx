@@ -12,6 +12,7 @@ export default function Sidebar() {
     { href: '/lifecycle', label: 'Lifecycle Methods', icon: '⚡' },
     { href: '/promises', label: 'JS Promises', icon: '🔄' },
     { href: '/axios-examples', label: 'Axios Examples', icon: '📦' },
+    { href: '/array-methods', label: 'Array Methods', icon: '📚' },
   ];
 
   return (
