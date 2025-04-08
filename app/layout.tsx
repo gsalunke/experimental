@@ -1,14 +1,10 @@
-import type { Metadata } from 'next';
+"use client";
+
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Sidebar from './components/navigation/Sidebar';
 
 const inter = Inter({ subsets: ['latin'] });
-
-export const metadata: Metadata = {
-  title: 'React Examples',
-  description: 'Collection of React examples including hooks, patterns, and best practices',
-};
 
 export default function RootLayout({
   children,
