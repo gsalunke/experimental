@@ -45,7 +45,18 @@ const ArrayMethodsExample = () => {
       city: user.address.city
     }));
 
-    setResult(JSON.stringify(userNames, null, 2));
+    setResult(`// Function being executed:
+const demonstrateMap = () => {
+  const userNames = users.map(user => ({
+    id: user.id,
+    name: user.name,
+    city: user.address.city
+  }));
+  return userNames;
+}
+
+// Result:
+${JSON.stringify(userNames, null, 2)}`);
   };
 
   // Example 2: filter() - Filter array based on condition
@@ -54,7 +65,16 @@ const ArrayMethodsExample = () => {
       user.address.city.toLowerCase().startsWith('s')
     );
 
-    setResult(JSON.stringify(citiesStartingWithS, null, 2));
+    setResult(`// Function being executed:
+const demonstrateFilter = () => {
+  const citiesStartingWithS = users.filter(user => 
+    user.address.city.toLowerCase().startsWith('s')
+  );
+  return citiesStartingWithS;
+}
+
+// Result:
+${JSON.stringify(citiesStartingWithS, null, 2)}`);
   };
 
   // Example 3: find() - Find first matching element
@@ -63,7 +83,16 @@ const ArrayMethodsExample = () => {
       user.email.includes('.biz')
     );
 
-    setResult(JSON.stringify(userWithEmail, null, 2));
+    setResult(`// Function being executed:
+const demonstrateFind = () => {
+  const userWithEmail = users.find(user => 
+    user.email.includes('.biz')
+  );
+  return userWithEmail;
+}
+
+// Result:
+${JSON.stringify(userWithEmail, null, 2)}`);
   };
 
   // Example 4: Chaining methods
@@ -77,7 +106,21 @@ const ArrayMethodsExample = () => {
       }))
       .sort((a, b) => a.name.localeCompare(b.name));
 
-    setResult(JSON.stringify(result, null, 2));
+    setResult(`// Function being executed:
+const demonstrateChaining = () => {
+  const result = users
+    .filter(user => user.address.city.toLowerCase().includes('s'))
+    .map(user => ({
+      name: user.name,
+      city: user.address.city,
+      email: user.email
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name));
+  return result;
+}
+
+// Result:
+${JSON.stringify(result, null, 2)}`);
   };
 
   // Example 5: reduce() - Aggregate array data
@@ -88,7 +131,18 @@ const ArrayMethodsExample = () => {
       return acc;
     }, {} as Record<string, number>);
 
-    setResult(JSON.stringify(cityCount, null, 2));
+    setResult(`// Function being executed:
+const demonstrateReduce = () => {
+  const cityCount = users.reduce((acc, user) => {
+    const city = user.address.city;
+    acc[city] = (acc[city] || 0) + 1;
+    return acc;
+  }, {} as Record<string, number>);
+  return cityCount;
+}
+
+// Result:
+${JSON.stringify(cityCount, null, 2)}`);
   };
 
   return (
@@ -167,7 +221,7 @@ console.log(numbers.length);  // 5`}
 
             {result && (
               <div className="bg-gray-50 p-4 rounded-lg">
-                <pre className="whitespace-pre-wrap overflow-auto max-h-[400px]">
+                <pre className="whitespace-pre-wrap overflow-auto max-h-[600px] text-sm font-mono">
                   {result}
                 </pre>
               </div>
