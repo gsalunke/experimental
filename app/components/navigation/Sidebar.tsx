@@ -11,6 +11,7 @@ export default function Sidebar() {
     { href: '/hooks', label: 'React Hooks', icon: '🎣' },
     { href: '/lifecycle', label: 'Lifecycle Methods', icon: '⚡' },
     { href: '/promises', label: 'JS Promises', icon: '🔄' },
+    { href: '/axios-examples', label: 'Axios Examples', icon: '📦' },
   ];
 
   return (
