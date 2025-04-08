@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const PromiseExample = () => {
   const [result, setResult] = useState<string>('');
@@ -99,6 +99,12 @@ const PromiseExample = () => {
         setLoading(false);
       });
   };
+
+  // Initialize examples on mount
+  useEffect(() => {
+    // This ensures we're only running client-side code
+    setResult('Click any button to see Promise examples in action!');
+  }, []);
 
   return (
     <div className="container mx-auto px-4 py-8">
