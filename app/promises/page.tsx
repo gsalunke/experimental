@@ -128,7 +128,7 @@ const PromiseExample = () => {
         <section className="p-4 bg-white rounded-lg shadow">
           <h2 className="text-xl font-semibold mb-4">Real-World Example: XMLHttpRequest with Promises</h2>
           <p className="text-gray-600 mb-4">
-            Here's a practical example of wrapping an XMLHttpRequest in a Promise to make API calls:
+            {`Here's`} a practical example of wrapping an XMLHttpRequest in a Promise to make API calls:
           </p>
           <div className="bg-gray-50 p-4 rounded-lg">
             <pre className="text-sm whitespace-pre-wrap">

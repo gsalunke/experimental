@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import UseEffectExample from '../components/hooks/UseEffectExample';
 import CustomHookExample from '../components/hooks/CustomHookExample';
 import { ThemeProvider, useTheme } from '../context/ThemeContext';
