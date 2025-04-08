@@ -216,6 +216,140 @@ const AxiosExample = () => {
         </section>
 
         <section className="p-4 bg-white rounded-lg shadow">
+          <h2 className="text-xl font-semibold mb-4">Vanilla JavaScript Examples (Try in Console)</h2>
+          <div className="grid gap-4">
+            <div>
+              <h3 className="font-semibold mb-2">Using Fetch API</h3>
+              <pre className="bg-gray-50 p-4 rounded-lg text-sm">
+{`// Basic GET Request
+async function fetchData() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+    const data = await response.json();
+    console.log('GET Result:', data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+// POST Request
+async function createPost() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        title: 'New Post',
+        body: 'This is a new post',
+        userId: 1
+      })
+    });
+    const data = await response.json();
+    console.log('POST Result:', data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+// PUT Request
+async function updatePost() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts/1', {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        id: 1,
+        title: 'Updated Post',
+        body: 'This post has been updated',
+        userId: 1
+      })
+    });
+    const data = await response.json();
+    console.log('PUT Result:', data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+// DELETE Request
+async function deletePost() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts/1', {
+      method: 'DELETE'
+    });
+    console.log('DELETE Status:', response.status);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+// Multiple Requests with Promise.all
+async function multipleRequests() {
+  try {
+    const urls = [
+      'https://jsonplaceholder.typicode.com/posts/1',
+      'https://jsonplaceholder.typicode.com/posts/2',
+      'https://jsonplaceholder.typicode.com/posts/3'
+    ];
+    
+    const promises = urls.map(url => fetch(url).then(res => res.json()));
+    const results = await Promise.all(promises);
+    console.log('Multiple Requests Results:', results);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+// Error Handling with Async/Await
+async function handleErrors() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/invalid');
+    if (!response.ok) {
+      throw new Error(\`HTTP error! status: \${response.status}\`);
+    }
+    const data = await response.json();
+    console.log('Data:', data);
+  } catch (error) {
+    console.error('Error caught:', error.message);
+  }
+}
+
+// Using XMLHttpRequest (Old School)
+function oldSchoolRequest() {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts/1');
+    xhr.onload = () => {
+      if (xhr.status === 200) {
+        resolve(JSON.parse(xhr.responseText));
+      } else {
+        reject(new Error(\`Request failed with status \${xhr.status}\`));
+      }
+    };
+    xhr.onerror = () => reject(new Error('Request failed'));
+    xhr.send();
+  });
+}
+
+// Copy any of these functions and run them in your browser's console!
+// Example usage:
+// fetchData()
+// createPost()
+// updatePost()
+// deletePost()
+// multipleRequests()
+// handleErrors()
+// oldSchoolRequest().then(console.log).catch(console.error)`}
+              </pre>
+            </div>
+          </div>
+        </section>
+
+        <section className="p-4 bg-white rounded-lg shadow">
           <h2 className="text-xl font-semibold mb-4">Code Examples</h2>
           <div className="grid gap-4">
             <div>
