@@ -145,6 +145,70 @@ const demonstrateReduce = () => {
 ${JSON.stringify(cityCount, null, 2)}`);
   };
 
+  // Example 6: some() and every()
+  const demonstrateSomeEvery = () => {
+    const hasSouthCity = users.some(user => 
+      user.address.city.toLowerCase().includes('south')
+    );
+
+    const allHaveEmail = users.every(user => 
+      user.email.includes('@')
+    );
+
+    setResult(`// Function being executed:
+const demonstrateSomeEvery = () => {
+  // some(): checks if at least one element matches the condition
+  const hasSouthCity = users.some(user => 
+    user.address.city.toLowerCase().includes('south')
+  );
+
+  // every(): checks if all elements match the condition
+  const allHaveEmail = users.every(user => 
+    user.email.includes('@')
+  );
+
+  return { hasSouthCity, allHaveEmail };
+}
+
+// Result:
+${JSON.stringify({ hasSouthCity, allHaveEmail }, null, 2)}`);
+  };
+
+  // Example 7: findIndex() and includes()
+  const demonstrateFindIndexIncludes = () => {
+    const userIndex = users.findIndex(user => 
+      user.username.toLowerCase().includes('bret')
+    );
+
+    const usernames = users.map(user => user.username);
+    const includesKarma = usernames.includes('Karianne');
+
+    setResult(`// Function being executed:
+const demonstrateFindIndexIncludes = () => {
+  // findIndex(): returns the index of the first matching element
+  const userIndex = users.findIndex(user => 
+    user.username.toLowerCase().includes('bret')
+  );
+
+  // includes(): checks if an array includes a certain value
+  const usernames = users.map(user => user.username);
+  const includesKarma = usernames.includes('Karianne');
+
+  return { 
+    userIndex,
+    includesKarma,
+    userAtIndex: userIndex !== -1 ? users[userIndex].username : null
+  };
+}
+
+// Result:
+${JSON.stringify({
+  userIndex,
+  includesKarma,
+  userAtIndex: userIndex !== -1 ? users[userIndex].username : null
+}, null, 2)}`);
+  };
+
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">JavaScript Array Methods</h1>
@@ -216,6 +280,20 @@ console.log(numbers.length);  // 5`}
                 >
                   reduce() Example
                 </button>
+
+                <button
+                  onClick={demonstrateSomeEvery}
+                  className="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600"
+                >
+                  some() & every()
+                </button>
+
+                <button
+                  onClick={demonstrateFindIndexIncludes}
+                  className="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600"
+                >
+                  findIndex() & includes()
+                </button>
               </div>
             )}
 
@@ -263,12 +341,22 @@ const firstEven = numbers.find(x => x % 2 === 0);
             </div>
 
             <div className="bg-gray-50 p-4 rounded-lg">
-              <h3 className="font-semibold mb-2">reduce()</h3>
-              <p className="mb-2">Reduces an array to a single value</p>
+              <h3 className="font-semibold mb-2">some() & every()</h3>
+              <p className="mb-2">Test array elements against a condition</p>
               <pre className="text-sm bg-gray-100 p-2 rounded">
-{`const numbers = [1, 2, 3, 4];
-const sum = numbers.reduce((acc, curr) => acc + curr, 0);
-// Result: 10`}
+{`const numbers = [1, 2, 3, 4, 5];
+const hasEven = numbers.some(x => x % 2 === 0);  // true
+const allEven = numbers.every(x => x % 2 === 0); // false`}
+              </pre>
+            </div>
+
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <h3 className="font-semibold mb-2">findIndex() & includes()</h3>
+              <p className="mb-2">Search for elements in an array</p>
+              <pre className="text-sm bg-gray-100 p-2 rounded">
+{`const fruits = ['apple', 'banana', 'orange'];
+const bananaIndex = fruits.findIndex(f => f === 'banana'); // 1
+const hasApple = fruits.includes('apple'); // true`}
               </pre>
             </div>
           </div>
