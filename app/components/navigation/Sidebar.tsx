@@ -10,6 +10,7 @@ export default function Sidebar() {
     { href: '/', label: 'Home', icon: '🏠' },
     { href: '/hooks', label: 'React Hooks', icon: '🎣' },
     { href: '/lifecycle', label: 'Lifecycle Methods', icon: '⚡' },
+    { href: '/promises', label: 'JS Promises', icon: '🔄' },
   ];
 
   return (

@@ -49,7 +49,7 @@ const UseEffectExample: React.FC = () => {
       <div className="counter-section">
         <p>Count: {count}</p>
         <button onClick={() => setCount(prev => prev + 1)}>
-          Increment (Check above Count!)
+          Increment (Check the page title!)
         </button>
       </div>
 
