@@ -1,18 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Experimental App
+
+A Next.js application showcasing the usage of @gsalunke/private-ui-components.
 
 ## Getting Started
 
-First, run the development server:
+1. Create a GitHub Personal Access Token with `read:packages` scope
+2. Copy `.npmrc.example` to `.npmrc` and replace `${GITHUB_TOKEN}` with your token:
+```bash
+cp .npmrc.example .npmrc
+```
 
+3. Edit `.npmrc` and replace `${GITHUB_TOKEN}` with your actual GitHub token
+
+4. Install dependencies:
+```bash
+npm install
+# or
+yarn
+```
+
+5. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+
+## Security Note
+
+Never commit your `.npmrc` file containing your GitHub token. The `.npmrc` file is already added to `.gitignore` to prevent accidental commits.
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## Getting Started
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

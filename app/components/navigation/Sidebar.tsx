@@ -13,6 +13,7 @@ export default function Sidebar() {
     { href: '/promises', label: 'JS Promises', icon: '🔄' },
     { href: '/axios-examples', label: 'Axios Examples', icon: '📦' },
     { href: '/array-methods', label: 'Array Methods', icon: '📚' },
+    { href: '/button-sample', label: 'Button Sample', icon: '🎨' },
   ];
 
   return (
