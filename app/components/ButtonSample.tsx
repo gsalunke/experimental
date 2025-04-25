@@ -140,7 +140,7 @@ export const ButtonSample: React.FC = () => {
           <h3 className="text-lg font-semibold mb-2">Theme Configuration</h3>
           <p className="text-sm text-gray-600 mb-4">
             Our library simplifies theming by focusing on brand colors. Just define your primary, 
-            secondary, and accent colors, and we'll handle all the variants and states.
+            secondary, and accent colors, and we&#39;ll handle all the variants and states.
           </p>
           <pre className="bg-white p-4 rounded-md overflow-x-auto">
             {JSON.stringify(orangeTheme, null, 2)}

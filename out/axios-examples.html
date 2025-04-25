@@ -1,4 +1,126 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/_next/static/media/a34f9d1faa5f3315-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="stylesheet" href="/_next/static/css/7f3e0d1a866e94b5.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-9682978e3e09731c.js"/><script src="/_next/static/chunks/4bd1b696-2226942ced936bcd.js" async=""></script><script src="/_next/static/chunks/684-65f0754427ee5daa.js" async=""></script><script src="/_next/static/chunks/main-app-f6e0c32794e65202.js" async=""></script><script src="/_next/static/chunks/874-29dac5e403b83630.js" async=""></script><script src="/_next/static/chunks/app/layout-300b82093545564f.js" async=""></script><script src="/_next/static/chunks/464-fa54c2978af1e7bb.js" async=""></script><script src="/_next/static/chunks/app/axios-examples/page-ea48dbae3d1c78e1.js" async=""></script><meta name="next-size-adjust" content=""/><link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body class="__className_d65c78"><div class="flex min-h-screen"><nav class="w-64 bg-gray-50 h-screen fixed left-0 top-0 p-4 border-r border-gray-200"><div class="mb-8"><h1 class="text-xl font-bold text-gray-800">React Examples</h1></div><ul class="space-y-2"><li><a class="flex items-center p-3 rounded-lg transition-colors text-gray-700 hover:bg-gray-100" href="/"><span class="mr-3">🏠</span>Home</a></li><li><a class="flex items-center p-3 rounded-lg transition-colors text-gray-700 hover:bg-gray-100" href="/hooks"><span class="mr-3">🎣</span>React Hooks</a></li><li><a class="flex items-center p-3 rounded-lg transition-colors text-gray-700 hover:bg-gray-100" href="/lifecycle"><span class="mr-3">⚡</span>Lifecycle Methods</a></li><li><a class="flex items-center p-3 rounded-lg transition-colors text-gray-700 hover:bg-gray-100" href="/promises"><span class="mr-3">🔄</span>JS Promises</a></li><li><a class="flex items-center p-3 rounded-lg transition-colors bg-blue-500 text-white" href="/axios-examples"><span class="mr-3">📦</span>Axios Examples</a></li></ul></nav><main class="flex-1 ml-64"><div class="container mx-auto px-4 py-8"><h1 class="text-3xl font-bold mb-6">Axios Examples with Promise Handling</h1><div class="grid gap-6"><section class="p-4 bg-white rounded-lg shadow"><h2 class="text-xl font-semibold mb-4">REST API Examples</h2><p class="text-gray-600 mb-4">Using JSONPlaceholder API to demonstrate different HTTP methods with Axios</p><div class="grid gap-4"><div class="flex flex-wrap gap-4"><button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">GET Request</button><button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">POST Request</button><button class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">PUT Request</button><button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">DELETE Request</button><button class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600">Multiple Requests</button><button class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">Async/Await Example</button></div></div></section><section class="p-4 bg-white rounded-lg shadow"><h2 class="text-xl font-semibold mb-4">Code Examples</h2><div class="grid gap-4"><div><h3 class="font-semibold mb-2">GET Request</h3><pre class="bg-gray-50 p-4 rounded-lg text-sm">axios.get(&#x27;https://api.example.com/posts/1&#x27;)
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/_next/static/media/a34f9d1faa5f3315-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="stylesheet" href="/_next/static/css/f3f1a665ace3ccb3.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-9682978e3e09731c.js"/><script src="/_next/static/chunks/4bd1b696-88dfbfe0f4e650de.js" async=""></script><script src="/_next/static/chunks/684-dab2a2d2ae7867f5.js" async=""></script><script src="/_next/static/chunks/main-app-f6e0c32794e65202.js" async=""></script><script src="/_next/static/chunks/874-2cd9e4c590dce02b.js" async=""></script><script src="/_next/static/chunks/app/layout-ff3f5c8a7adfbc0a.js" async=""></script><script src="/_next/static/chunks/464-fa54c2978af1e7bb.js" async=""></script><script src="/_next/static/chunks/app/axios-examples/page-154e7253951b1f47.js" async=""></script><meta name="next-size-adjust" content=""/><link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body class="__className_d65c78"><div class="flex min-h-screen"><nav class="w-64 bg-gray-50 h-screen fixed left-0 top-0 p-4 border-r border-gray-200"><div class="mb-8"><h1 class="text-xl font-bold text-gray-800">React Examples</h1></div><ul class="space-y-2"><li><a class="flex items-center p-3 rounded-lg transition-colors text-gray-700 hover:bg-gray-100" href="/"><span class="mr-3">🏠</span>Home</a></li><li><a class="flex items-center p-3 rounded-lg transition-colors text-gray-700 hover:bg-gray-100" href="/hooks"><span class="mr-3">🎣</span>React Hooks</a></li><li><a class="flex items-center p-3 rounded-lg transition-colors text-gray-700 hover:bg-gray-100" href="/lifecycle"><span class="mr-3">⚡</span>Lifecycle Methods</a></li><li><a class="flex items-center p-3 rounded-lg transition-colors text-gray-700 hover:bg-gray-100" href="/promises"><span class="mr-3">🔄</span>JS Promises</a></li><li><a class="flex items-center p-3 rounded-lg transition-colors bg-blue-500 text-white" href="/axios-examples"><span class="mr-3">📦</span>Axios Examples</a></li><li><a class="flex items-center p-3 rounded-lg transition-colors text-gray-700 hover:bg-gray-100" href="/array-methods"><span class="mr-3">📚</span>Array Methods</a></li><li><a class="flex items-center p-3 rounded-lg transition-colors text-gray-700 hover:bg-gray-100" href="/button-sample"><span class="mr-3">🎨</span>Button Sample</a></li></ul></nav><main class="flex-1 ml-64"><div class="container mx-auto px-4 py-8"><h1 class="text-3xl font-bold mb-6">Axios Examples with Promise Handling</h1><div class="grid gap-6"><section class="p-4 bg-white rounded-lg shadow"><h2 class="text-xl font-semibold mb-4">REST API Examples</h2><p class="text-gray-600 mb-4">Using JSONPlaceholder API to demonstrate different HTTP methods with Axios</p><div class="grid gap-4"><div class="flex flex-wrap gap-4"><button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">GET Request</button><button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">POST Request</button><button class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">PUT Request</button><button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">DELETE Request</button><button class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600">Multiple Requests</button><button class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">Async/Await Example</button></div></div></section><section class="p-4 bg-white rounded-lg shadow"><h2 class="text-xl font-semibold mb-4">Vanilla JavaScript Examples (Try in Console)</h2><div class="grid gap-4"><div><h3 class="font-semibold mb-2">Using Fetch API</h3><pre class="bg-gray-50 p-4 rounded-lg text-sm">// Basic GET Request
+async function fetchData() {
+  try {
+    const response = await fetch(&#x27;https://jsonplaceholder.typicode.com/posts/1&#x27;);
+    const data = await response.json();
+    console.log(&#x27;GET Result:&#x27;, data);
+  } catch (error) {
+    console.error(&#x27;Error:&#x27;, error);
+  }
+}
+
+// POST Request
+async function createPost() {
+  try {
+    const response = await fetch(&#x27;https://jsonplaceholder.typicode.com/posts&#x27;, {
+      method: &#x27;POST&#x27;,
+      headers: {
+        &#x27;Content-Type&#x27;: &#x27;application/json&#x27;
+      },
+      body: JSON.stringify({
+        title: &#x27;New Post&#x27;,
+        body: &#x27;This is a new post&#x27;,
+        userId: 1
+      })
+    });
+    const data = await response.json();
+    console.log(&#x27;POST Result:&#x27;, data);
+  } catch (error) {
+    console.error(&#x27;Error:&#x27;, error);
+  }
+}
+
+// PUT Request
+async function updatePost() {
+  try {
+    const response = await fetch(&#x27;https://jsonplaceholder.typicode.com/posts/1&#x27;, {
+      method: &#x27;PUT&#x27;,
+      headers: {
+        &#x27;Content-Type&#x27;: &#x27;application/json&#x27;
+      },
+      body: JSON.stringify({
+        id: 1,
+        title: &#x27;Updated Post&#x27;,
+        body: &#x27;This post has been updated&#x27;,
+        userId: 1
+      })
+    });
+    const data = await response.json();
+    console.log(&#x27;PUT Result:&#x27;, data);
+  } catch (error) {
+    console.error(&#x27;Error:&#x27;, error);
+  }
+}
+
+// DELETE Request
+async function deletePost() {
+  try {
+    const response = await fetch(&#x27;https://jsonplaceholder.typicode.com/posts/1&#x27;, {
+      method: &#x27;DELETE&#x27;
+    });
+    console.log(&#x27;DELETE Status:&#x27;, response.status);
+  } catch (error) {
+    console.error(&#x27;Error:&#x27;, error);
+  }
+}
+
+// Multiple Requests with Promise.all
+async function multipleRequests() {
+  try {
+    const urls = [
+      &#x27;https://jsonplaceholder.typicode.com/posts/1&#x27;,
+      &#x27;https://jsonplaceholder.typicode.com/posts/2&#x27;,
+      &#x27;https://jsonplaceholder.typicode.com/posts/3&#x27;
+    ];
+    
+    const promises = urls.map(url =&gt; fetch(url).then(res =&gt; res.json()));
+    const results = await Promise.all(promises);
+    console.log(&#x27;Multiple Requests Results:&#x27;, results);
+  } catch (error) {
+    console.error(&#x27;Error:&#x27;, error);
+  }
+}
+
+// Error Handling with Async/Await
+async function handleErrors() {
+  try {
+    const response = await fetch(&#x27;https://jsonplaceholder.typicode.com/invalid&#x27;);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    console.log(&#x27;Data:&#x27;, data);
+  } catch (error) {
+    console.error(&#x27;Error caught:&#x27;, error.message);
+  }
+}
+
+// Using XMLHttpRequest (Old School)
+function oldSchoolRequest() {
+  return new Promise((resolve, reject) =&gt; {
+    const xhr = new XMLHttpRequest();
+    xhr.open(&#x27;GET&#x27;, &#x27;https://jsonplaceholder.typicode.com/posts/1&#x27;);
+    xhr.onload = () =&gt; {
+      if (xhr.status === 200) {
+        resolve(JSON.parse(xhr.responseText));
+      } else {
+        reject(new Error(`Request failed with status ${xhr.status}`));
+      }
+    };
+    xhr.onerror = () =&gt; reject(new Error(&#x27;Request failed&#x27;));
+    xhr.send();
+  });
+}
+
+// Copy any of these functions and run them in your browser&#x27;s console!
+// Example usage:
+// fetchData()
+// createPost()
+// updatePost()
+// deletePost()
+// multipleRequests()
+// handleErrors()
+// oldSchoolRequest().then(console.log).catch(console.error)</pre></div></div></section><section class="p-4 bg-white rounded-lg shadow"><h2 class="text-xl font-semibold mb-4">Code Examples</h2><div class="grid gap-4"><div><h3 class="font-semibold mb-2">GET Request</h3><pre class="bg-gray-50 p-4 rounded-lg text-sm">axios.get(&#x27;https://api.example.com/posts/1&#x27;)
   .then(response =&gt; {
     console.log(response.data);
   })
@@ -22,4 +144,4 @@
     console.error(&#x27;Error:&#x27;, error);
     throw error;
   }
-}</pre></div></div></section></div></div></main></div><script src="/_next/static/chunks/webpack-9682978e3e09731c.js" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[4970,[],\"ClientSegmentRoot\"]\n3:I[4847,[\"874\",\"static/chunks/874-29dac5e403b83630.js\",\"177\",\"static/chunks/app/layout-300b82093545564f.js\"],\"default\"]\n4:I[7555,[],\"\"]\n5:I[1295,[],\"\"]\n7:I[894,[],\"ClientPageRoot\"]\n8:I[784,[\"464\",\"static/chunks/464-fa54c2978af1e7bb.js\",\"97\",\"static/chunks/app/axios-examples/page-ea48dbae3d1c78e1.js\"],\"default\"]\nb:I[9665,[],\"OutletBoundary\"]\ne:I[9665,[],\"ViewportBoundary\"]\n10:I[9665,[],\"MetadataBoundary\"]\n12:I[6614,[],\"\"]\n:HL[\"/_next/static/media/a34f9d1faa5f3315-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/css/7f3e0d1a866e94b5.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"JyCkoZuo4OmDL8sddnQ08\",\"p\":\"\",\"c\":[\"\",\"axios-examples\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"axios-examples\",{\"children\":[\"__PAGE__\",{}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/7f3e0d1a866e94b5.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"$L2\",null,{\"Component\":\"$3\",\"slots\":{\"children\":[\"$\",\"$L4\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L5\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]},\"params\":{},\"promise\":\"$@6\"}]]}],{\"children\":[\"axios-examples\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L4\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L5\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[[\"$\",\"$L7\",null,{\"Component\":\"$8\",\"searchParams\":{},\"params\":\"$0:f:0:1:1:props:children:1:props:params\",\"promises\":[\"$@9\",\"$@a\"]}],\"$undefined\",null,[\"$\",\"$Lb\",null,{\"children\":[\"$Lc\",\"$Ld\",null]}]]}],{},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$1\",\"Bm-LEjaTUphGmE0JfDeC_\",{\"children\":[[\"$\",\"$Le\",null,{\"children\":\"$Lf\"}],[\"$\",\"meta\",null,{\"name\":\"next-size-adjust\",\"content\":\"\"}]]}],[\"$\",\"$L10\",null,{\"children\":\"$L11\"}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$12\",\"$undefined\"],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"6:{}\n9:{}\na:{}\n"])</script><script>self.__next_f.push([1,"f:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\nc:null\n"])</script><script>self.__next_f.push([1,"d:null\n11:[[\"$\",\"link\",\"0\",{\"rel\":\"icon\",\"href\":\"/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"16x16\"}]]\n"])</script></body></html>
+}</pre></div></div></section></div></div></main></div><script src="/_next/static/chunks/webpack-9682978e3e09731c.js" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[4970,[],\"ClientSegmentRoot\"]\n3:I[4847,[\"874\",\"static/chunks/874-2cd9e4c590dce02b.js\",\"177\",\"static/chunks/app/layout-ff3f5c8a7adfbc0a.js\"],\"default\"]\n4:I[7555,[],\"\"]\n5:I[1295,[],\"\"]\n7:I[894,[],\"ClientPageRoot\"]\n8:I[784,[\"464\",\"static/chunks/464-fa54c2978af1e7bb.js\",\"97\",\"static/chunks/app/axios-examples/page-154e7253951b1f47.js\"],\"default\"]\nb:I[9665,[],\"OutletBoundary\"]\ne:I[9665,[],\"ViewportBoundary\"]\n10:I[9665,[],\"MetadataBoundary\"]\n12:I[6614,[],\"\"]\n:HL[\"/_next/static/media/a34f9d1faa5f3315-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/css/f3f1a665ace3ccb3.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"jmzq-CFbfGxTkGMr3tGnt\",\"p\":\"\",\"c\":[\"\",\"axios-examples\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"axios-examples\",{\"children\":[\"__PAGE__\",{}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/f3f1a665ace3ccb3.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"$L2\",null,{\"Component\":\"$3\",\"slots\":{\"children\":[\"$\",\"$L4\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L5\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]},\"params\":{},\"promise\":\"$@6\"}]]}],{\"children\":[\"axios-examples\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L4\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L5\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[[\"$\",\"$L7\",null,{\"Component\":\"$8\",\"searchParams\":{},\"params\":\"$0:f:0:1:1:props:children:1:props:params\",\"promises\":[\"$@9\",\"$@a\"]}],\"$undefined\",null,[\"$\",\"$Lb\",null,{\"children\":[\"$Lc\",\"$Ld\",null]}]]}],{},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$1\",\"fO2mr1nai6mWo6avpewXn\",{\"children\":[[\"$\",\"$Le\",null,{\"children\":\"$Lf\"}],[\"$\",\"meta\",null,{\"name\":\"next-size-adjust\",\"content\":\"\"}]]}],[\"$\",\"$L10\",null,{\"children\":\"$L11\"}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$12\",\"$undefined\"],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"6:{}\n9:{}\na:{}\n"])</script><script>self.__next_f.push([1,"f:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\nc:null\n"])</script><script>self.__next_f.push([1,"d:null\n11:[[\"$\",\"link\",\"0\",{\"rel\":\"icon\",\"href\":\"/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"16x16\"}]]\n"])</script></body></html>
